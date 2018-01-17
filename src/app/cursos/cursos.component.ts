@@ -9,11 +9,16 @@ import { CursosService } from './cursos.service';
 })
 export class CursosComponent implements OnInit {
 
-  cursos: string[] = ['Angular2', 'Java', 'JS'];
+  cursos: string[] = [];
 
-  constructor() { }
+  cursosService: CursosService;
+
+  constructor() { 
+    this.cursosService = new CursosService();
+  }
 
   ngOnInit() {
+    this.cursos = this.cursosService.getCursos();
   }
 
 }
