@@ -4,6 +4,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 export class CursosService {
 
   emitirCursoCriado = new EventEmitter<string>();
+ static criouNovoCurso = new EventEmitter<string>();
 
   private cursos: string[] = ['Angular2', 'Java', 'JS'];
 
