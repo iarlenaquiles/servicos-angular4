@@ -1,3 +1,4 @@
+import { LogService } from './../shared/log.service';
 import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable()
@@ -8,7 +9,7 @@ export class CursosService {
 
   private cursos: string[] = ['Angular2', 'Java', 'JS'];
 
-  constructor() {
+  constructor(private logService: LogService) {
     console.log('CursosService');
    }
 
