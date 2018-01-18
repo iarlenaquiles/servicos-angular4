@@ -5,4 +5,8 @@ export class LogService {
 
   constructor() { }
 
+  consoleLog(msg: string) {
+    console.log(msg);
+  }
+
 }
